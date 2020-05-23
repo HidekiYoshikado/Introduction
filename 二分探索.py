@@ -1,13 +1,12 @@
 def binarysearch(s):
-    s=50
     l=0
-    h=100
+    h=1000000
     while l<h:
-        print("it is higher than "+str(s)+"?" )
-        x=input()
-        if x=="Yes":
-            l=s+1
+        s=(l+h)/2
+        if f(s)==0:
+            return s
+        if f(s)>0:
+            l=s
         else:
             h=s
-        s=int((l+h)/2)
-    return s
+
